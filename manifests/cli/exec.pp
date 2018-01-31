@@ -22,6 +22,7 @@ define jenkins::cli::exec(
       flatten([
         $::jenkins::cli_helper::helper_cmd,
         $command,
+        $::jenkins::_cli_auth_arg,
       ])
     ),
     ' '
